@@ -8,13 +8,19 @@ document.write(result);
 function solveQuadr(a, b, c) {
     if (a === 0 && b !== 0 && c !== 0) {
         x = -(c) / b;
-        return 'x= ' + x;
+        return 'This is not a Quadratic equation, just a simple equation and result is' +' ' + 'x= ' + x;
     }
-    if (a !== 0 && b !== 0 && c === 0) {
+    /*if (a !== 0 && b !== 0 && c === 0) {
         x1 = 0;
         x2 = -(b) / a;
         return 'x1= ' + x1 + ' ' + 'x2= ' + x2;
+    }*/
+    if ((a !== 0) && (b === 0) && (c !== 0)) {
+        x1 = Math.sqrt(c / a);
+        x2 = -(Math.sqrt(c / a));
+        return 'x1= ' + x1 + ' ' + 'x2= ' + x2;
     }
+    
     if ((a !== 0) && (b !== 0) && (c !== 0)) {
         calcDisc = (b * b) - (4 * a * c);
     }
@@ -26,7 +32,7 @@ function solveQuadr(a, b, c) {
         return 'Has no real roots';
     } else if (calcDisc === 0) {
         x = (-(b) / (2 * a));
-        return 'x= ' + x;
+        return 'Because Discriminant=0, x1=x2=  ' + x;
     }
     /*if ((a !== 0) && (b === 0) && (c !== 0)) {
         x1 = Math.sqrt(c / a);
