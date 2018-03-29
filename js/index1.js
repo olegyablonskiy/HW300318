@@ -6,19 +6,34 @@ const result = solveQuadr(a, b, c);
 document.write(result);
 
 function solveQuadr(a, b, c) {
-   if (a === 0) {
-        document.write("It is not a Quadratic equation, it is linear equation");
-        return;
-    } else if (a !== 0) {
-        calcDisc = b*b - 4 * a * c;
-        if (calcDisc === 0){
-            const x = -b / 2 * a;
-            return 'x= '+ x;
+   /* if (a === 0) {
+        x = -c / b;
+        return 'x= ' + x;
+    } else if (c === 0) {
+        x1 = 0;
+        x2 = -b / a;
+        return 'x1= ' + x1 + ' ' + 'x2= ' + x2;
+        { else if (b === 0) {
+        (x**) = -c / a;
+        else if ((-c/a) > 0) {
+            x1 = Math.sqrt(-c/a);
+            x2 = -(Math.sqrt(-c/a));
+            return 'x1= '+ x1 + ' ' + 'x2= '+ x2;
+        } else if ((-c/a) < 0) {
+            return 'Has no real roots';
         }
+    } else*/ if ((a !== 0) && (b !== 0) && (c !== 0)) {
+         calcDisc = (b * b) - (4 * a * c);
     }
-    const x1 =(-b + Math.sqrt(calcDisc)) / 2 * a;
-    const x2 =(-b - Math.sqrt(calcDisc)) / 2 * a;
- 
-    return 'x1= '+ x1 + ' ' + 'x2= '+ x2;
+        if (calcDisc === 0) {
+             x = (-b / (2 * a));
+            return 'x= ' + x;
+        } else if (calcDisc < 0) {
+            return 'Has no real roots';
+        } else if (calcDisc > 0){
+    x1 = (-b + Math.sqrt(calcDisc)) / (2 * a);
+    x2 = (-b - Math.sqrt(calcDisc)) / (2 * a);
+    return 'x1= ' + x1 + ' ' + 'x2= ' + x2;
+    }
 }
-   
+
