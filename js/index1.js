@@ -19,21 +19,4 @@ function solveQuadr(a, b, c) {
     const x1 = (-b + Math.sqrt(disk)) / (2 * a);
     const x2 = (-b - Math.sqrt(disk)) / (2 * a);
     return 'x1= ' + x1 + ' ' + 'x2= ' + x2;
-    
-     /*  if ((a !== 0) && (b === 0) && (c !== 0)) {
-        x1 = Math.sqrt(c / a);
-        x2 = -(Math.sqrt(c / a));
-        return 'x1= ' + x1 + ' ' + 'x2= ' + x2;
-    }*/
-    /*if ((a !== 0) && (b === 0) && (c !== 0)) {
-        x1 = Math.sqrt(c / a);
-        x2 = -(Math.sqrt(c / a));
-        return 'x1= ' + x1 + ' ' + 'x2= ' + x2;
-    }
-    if ((c / a) < 0) {
-        return 'Has no real roots';
-    } else if ((c / a) > 0) {
-        x = Math.sqrt(c / a);
-        return 'x= ' + '(+/-)' + x;
-    }*/
 }
