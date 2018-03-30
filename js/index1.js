@@ -6,7 +6,7 @@ const result = solveQuadr(a, b, c);
 document.write(result);
 
 function solveQuadr(a, b, c) {
-    if (a === 0 && b !== 0 ) {
+    if (a === 0) {
         let x = -(c) / b;
         return 'This is not a Quadratic equation, just a simple equation and result is' +' ' + 'x= ' + x;
     }
