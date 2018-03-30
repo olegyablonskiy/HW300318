@@ -6,7 +6,7 @@ const result = solveQuadr(a, b, c);
 document.write(result);
 
 function solveQuadr(a, b, c) {
-    if (a === 0 && b !== 0 && c !== 0) {
+    if (a === 0 && b !== 0 ) {
         let x = -(c) / b;
         return 'This is not a Quadratic equation, just a simple equation and result is' +' ' + 'x= ' + x;
     }
@@ -30,10 +30,6 @@ function solveQuadr(a, b, c) {
     let x2 = (-b - Math.sqrt(calcDisc)) / (2 * a);
     return 'x1= ' + x1 + ' ' + 'x2= ' + x2;
     
-    /* else if (calcDisc === 0) {
-        x = (-(b) / (2 * a));
-        return 'Because Discriminant=0, x1=x2=  ' + x;
-    }*/
     /*if ((a !== 0) && (b === 0) && (c !== 0)) {
         x1 = Math.sqrt(c / a);
         x2 = -(Math.sqrt(c / a));
