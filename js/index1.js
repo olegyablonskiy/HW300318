@@ -7,7 +7,7 @@ document.write(result);
 
 function solveQuadr(a, b, c) {
     if (a === 0 && b !== 0 && c !== 0) {
-        x = -(c) / b;
+        let x = -(c) / b;
         return 'This is not a Quadratic equation, just a simple equation and result is' +' ' + 'x= ' + x;
     }
     /*if (a !== 0 && b !== 0 && c === 0) {
@@ -15,25 +15,25 @@ function solveQuadr(a, b, c) {
         x2 = -(b) / a;
         return 'x1= ' + x1 + ' ' + 'x2= ' + x2;
     }*/
-    if ((a !== 0) && (b === 0) && (c !== 0)) {
+  /*  if ((a !== 0) && (b === 0) && (c !== 0)) {
         x1 = Math.sqrt(c / a);
         x2 = -(Math.sqrt(c / a));
         return 'x1= ' + x1 + ' ' + 'x2= ' + x2;
+    }*/
+    
+    let calcDisc = (b * b) - (4 * a * c);
+    if (calcDisc < 0) {
+        return 'Has no real roots';
     }
     
-    if ((a !== 0) && (b !== 0) && (c !== 0)) {
-        calcDisc = (b * b) - (4 * a * c);
-    }
-    if (calcDisc > 0) {
-        x1 = (-b + Math.sqrt(calcDisc)) / (2 * a);
-        x2 = (-b - Math.sqrt(calcDisc)) / (2 * a);
-        return 'x1= ' + x1 + ' ' + 'x2= ' + x2;
-    } else if (calcDisc < 0) {
-        return 'Has no real roots';
-    } else if (calcDisc === 0) {
+    let x1 = (-b + Math.sqrt(calcDisc)) / (2 * a);
+    let x2 = (-b - Math.sqrt(calcDisc)) / (2 * a);
+    return 'x1= ' + x1 + ' ' + 'x2= ' + x2;
+    
+    /* else if (calcDisc === 0) {
         x = (-(b) / (2 * a));
         return 'Because Discriminant=0, x1=x2=  ' + x;
-    }
+    }*/
     /*if ((a !== 0) && (b === 0) && (c !== 0)) {
         x1 = Math.sqrt(c / a);
         x2 = -(Math.sqrt(c / a));
